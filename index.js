@@ -14,7 +14,7 @@ function akanName(){
 var birthday= document.getElementById('birthday').value;
 // alert(birthday);
 var a=new Date(birthday);
-var weekday=a.getDate();
+var weekday=a.getDay();
 var femaleNames=['Akosua','Adwoa',' Abenaa','Akua','Yaa',' Afua','Ama'];
 var maleNames=['Kwasi','Kwadwo','Kwabena',' Kwaku','Yaw','Kofi',' Kwame'];
 var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -30,13 +30,16 @@ var male=document.getElementById(male);
     else{
    if (gender=='female'){
        var day= days[weekday];
-       alert(femaleNames[weekday])
-        // document.getElementById("answer").innerHTML= "<span><i class=\"fa fa-female\"></i></span> +Born on a <span>" + day+ "</span>, Your Akan Name's <span>" + femaleNames[day]+ "</span>";;
+       var name=femaleNames[weekday];
+    //    alert(name);
+        document.getElementById("answer").innerHTML= "<span><i class=\"fa fa-female\"></i></span>Born on a <span>" + day+ "</span>, Your Akan Name is <span>" + name + "</span>";;
     }
     else{
         var day=days[weekday];
-        alert(maleNames[weekday])
-        // document.getElementById('answer').innerHTML= "<span><i class=\"fa fa-male\"></i></span>Born on a <span>" + day + "</span>, Your Akan Name's <span>" + maleNames[day] + "</span>";;
+       var name=maleNames[weekday];
+
+        // alert(name);
+        document.getElementById('answer').innerHTML= "<span><i class=\"fa fa-male\"></i></span>Born on a <span>" + day + "</span>, Your Akan Name is <span>" + name + "</span>";;
     }
 }
 }
