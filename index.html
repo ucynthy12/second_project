@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://kit.fontawesome.com/160b0d3734.js" crossorigin="anonymous"></script>
     <title>Akan Names</title>
-    <script src="index.js"></script>
+   
 </head>
 
 <body>
@@ -81,152 +81,78 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <h2>Find your Akan name</h2>
-                    <div class="container">
+                    <!-- <h4 >Find your Akan name</h4> -->
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="card w-100">
+                            <div class="card w-50 col-lg-8">
                                 <div class="card body">
                                     <h5 class="text-muted">Select your birthday</h5>
                                     <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="month">Months</label>
-                                                <select class="form-control" id="month">
-                                                    <option value="" disabled selected>--month--</option>
-                                                    <option>January</option>
-                                                    <option>February</option>
-                                                    <option>March</option>
-                                                    <option>April</option>
-                                                    <option>May</option>
-                                                    <option>June</option>
-                                                    <option>July</option>
-                                                    <option>August</option>
-                                                    <option>September</option>
-                                                    <option>October</option>
-                                                    <option>November</option>
-                                                    <option>December</option>
-                                                </select>
+                                        <div class="col">
+
+                                            <!-- <form action="/action_page.php"> -->
+                                                <label for="birthday">Birthday:</label>
+                                                <input type="date" id="birthday" name="birthday">
+                                         &nbsp;&nbsp;
+                                            <!-- </form> -->
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    &nbsp; &nbsp;
+                                                    <legend class="col-form-label  text-muted ">Gender</legend>
+                                                    <div class="col">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="gridRadios" id="gender" value="female"
+                                                                checked>
+                                                            <label class="form-check-label" for="female">
+                                                                Female
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="gridRadios" id="gender" value="male">
+                                                            <label class="form-check-label" for="male">
+                                                                Male
+                                                            </label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <!-- &nbsp;&nbsp; -->
+                                            </fieldset>
+
+                                            <div class="form-group row">
+                                                <div class="col-sm-10">
+                                                    <button type="button"  onclick="akanName()"class="btn btn-primary">Submit</button>
+                                                </div>
                                             </div>
+
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="days">Days</label>
-                                                <select class="form-control" id="Days">
-                                                    <option value="" disabled selected>---day---</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                    <option>6</option>
-                                                    <option>7</option>
-                                                    <option>8</option>
-                                                    <option>9</option>
-                                                    <option>10</option>
-                                                    <option>11</option>
-                                                    <option>12</option>
-                                                    <option>13</option>
-                                                    <option>14</option>
-                                                    <option>15</option>
-                                                    <option>16</option>
-                                                    <option>17</option>
-                                                    <option>18</option>
-                                                    <option>19</option>
-                                                    <option>20</option>
-                                                    <option>21</option>
-                                                    <option>22</option>
-                                                    <option>23</option>
-                                                    <option>24</option>
-                                                    <option>25</option>
-                                                    <option>26</option>
-                                                    <option>27</option>
-                                                    <option>28</option>
-                                                    <option>29</option>
-                                                    <option>30</option>
-                                                    <option>31</option>
 
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="years">Years</label>
-                                                <select class="form-control" id="years">
-                                                    <option value="" disabled selected>--year--</option>
-                                                    <!-- <script>
-
-                                                        var currentYear = new Date().getFullYear();
-                                                        var startYear = "1990";
-                                                        var yroption = " < option value='0'>---year--- </option>";
-                                                        function createYearOption() {
-
-                                                            for (var i = startYear; i <= currentYear; i++) {
-                                                                yroption += "<option value='parseInt(startYear++)'>'parseInt(startYear++)'</option>";
-
-                                                                document.getElementById("years").innerHTML = yroption;
-                                                                console.log(yroption);
-                                                            }
-                                                        }
-                                                        createYearOption();
-                                                    </script> -->
-                                                </select>
-                                            </div>
-                                        </div>
                                     </div>
+
                                 </div>
                                 <div class="row">
-                                    <fieldset class="form-group">
-                                        <div class="row">
-                                            <legend class="col-form-label col-sm ">Gender</legend>
-                                            <div class="col-sm">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios"
-                                                        id="gridRadios1" value="female" checked>
-                                                    <label class="form-check-label" for="gridRadios1">
-                                                        Female
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios"
-                                                        id="gridRadios2" value="male">
-                                                    <label class="form-check-label" for="gridRadios2">
-                                                        Male
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                </div>
-
-                                <div class="form-group row">
-                                    <div class="col-sm-10">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </div>
+                                    <p id="answer"></p>
                                 </div>
                             </div>
+                        </div>
 
-                        </div>
-                        <div class="row bg-primary" id="answer">
-                            hao
-                        </div>
                     </div>
+
                 </div>
-
             </div>
-
         </div>
-    </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
 </body>
 
