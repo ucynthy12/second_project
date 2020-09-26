@@ -9,3 +9,23 @@
     /* margin-bottom:30px; */
 /* } */ 
 
+/* #body{
+    overflow-x: hidden;
+}
+.hi-slide{
+    position: relative;
+
+}
+.hi-slide .hi-next,.hi-slide .hi-prev{
+     position: absolute;
+     top: 50%;
+     width: 40px;
+     height: 40px;
+     margin-top: -20px;
+     border-radius: 50px;
+     line-height: 40px;
+     text-align: center;
+     cursor: pointer;
+     background: white;
+     color:black;
+} */
